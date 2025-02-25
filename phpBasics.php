@@ -11,5 +11,15 @@ echo var_dump(PHP_FLOAT_MAX);
 // php numeric values boundaries
 echo ("PHP_FLOAT_MAX PHP_FLOAT_MIN PHP_FLOAT_DIG PHP_FLOAT_EPSILON");
 
+// passing variables by reference
+function modifyValue(&$value) {
+    $value = $value * 2;
+}
+
+$number = 10;
+modifyValue($number);
+
+echo $number;  // Outputs: 20
+
 
 ?>
