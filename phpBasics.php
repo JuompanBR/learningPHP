@@ -21,5 +21,25 @@ modifyValue($number);
 
 echo $number;  // Outputs: 20
 
+// type modifiers
+// 4.6 abstract, final, and static
+// When present, the abstract and final declarations MUST precede the visibility declaration.
+
+// When present, the static declaration MUST come after the visibility declaration.
+
+namespace Vendor\Package;
+
+abstract class ClassName
+{
+    protected static $foo;
+
+    abstract protected function zim();
+
+    final public static function bar()
+    {
+        // method body
+    }
+}
+
 
 ?>
